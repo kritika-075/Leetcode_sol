@@ -1,4 +1,5 @@
 //updated solution
+//some changes
 
 
 https://leetcode.com/problems/132-pattern/
@@ -24,6 +25,7 @@ public:
             }
             st.push(nums[i]) ;
         }
+        
         return false ;
     }
 };
