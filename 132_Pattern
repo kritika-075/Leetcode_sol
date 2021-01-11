@@ -1,5 +1,9 @@
+//updated solution
+
+
 https://leetcode.com/problems/132-pattern/
-class Solution {
+class Solution 
+{
 public:
     bool find132pattern(vector<int>& nums) {
         int prev=INT_MIN ;
