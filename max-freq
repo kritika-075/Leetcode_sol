@@ -1,24 +1,16 @@
+//NEW VERSION 
+
 https://leetcode.com/problems/maximum-frequency-stack
-class FreqStack {
+class FreqStack
+{
 public:
-    unordered_map<int,int> mp;
-    unordered_map<int,stack<int>> st;
     int max1;
     FreqStack() {
         max1=0;
     }
-    
-    void push(int x) {
-        if(mp.find(x)==mp.end())
-            mp[x]=1;
-        else
-            mp[x]++;
-        st[mp[x]].push(x);
-        if(mp[x]>max1)
-            max1=mp[x];  
-    }
-    
-    int pop() {
+  unordered_map<int,int> mp;
+  unordered_map<int,stack<int>> st;  
+     int pop() {
         int cur=st[max1].top();
         st[max1].pop();
         if(st[max1].size()==0)
@@ -29,6 +21,16 @@ public:
         mp[cur]--;
         return cur;
     }
+    void push(int x) {
+        if(mp.find(x)==mp.end())
+            mp[x]=1;
+        else
+            mp[x]++;
+        st[mp[x]].push(x);
+        if(mp[x]>max1)
+            max1=mp[x];  
+    }
+    
 };
 
 /**
